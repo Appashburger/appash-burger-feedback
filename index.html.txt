@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appash Burger — Retour client</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="burger-emoji">🍔</div>
+        <div>
+          <h1>Appash Burger</h1>
+          <div class="slogan">Votre avis, notre meilleur ingrédient !</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="intro">
+      <h2>Partage ton expérience</h2>
+      <p>
+        Chez <strong>Appash Burger</strong>, nous cherchons constamment à améliorer nos recettes et notre service.
+        Laisse-nous un message et dis-nous ce que tu as aimé (ou pas). Ton <strong>nom d'utilisateur Snapchat</strong> nous permettra de te répondre si besoin.
+      </p>
+    </section>
+
+    <section class="form-section">
+      <!-- Remplace l'URL ci-dessous par ton endpoint Formspree -->
+      <form id="feedbackForm" method="POST" action="https://formspree.io/f/TON_ENDPOINT" novalidate>
+        <label for="snap">Nom d'utilisateur Snapchat <span class="required">*</span></label>
+        <input id="snap" name="snapchat" type="text" placeholder="ex: monSnap123" required minlength="2" />
+
+        <label for="message">Ton message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Raconte-nous ton expérience..." required></textarea>
+
+        <div class="actions">
+          <button type="submit" id="sendBtn" class="btn">Envoyer mon retour</button>
+        </div>
+
+        <p class="hint">
+          Nous utiliserons ton nom d'utilisateur Snapchat uniquement pour te contacter si nécessaire.
+          Pas de collecte de données supplémentaires. En envoyant, tu acceptes que nous conservions ton message et ton pseudo Snapchat.
+        </p>
+      </form>
+
+      <div id="thanks" class="thanks hidden">
+        <h3>Merci pour ton retour ! 🍔</h3>
+        <p>Nous avons bien reçu ton message. Si nécessaire, nous pourrons te contacter via ton pseudo Snapchat.</p>
+        <button id="newFeedback" class="btn secondary">Envoyer un autre retour</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Appash Burger — Merci pour ta confiance !</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
